@@ -15,7 +15,7 @@ _[textual representation of the database schema in DBML](/docs/schema.dbml)_
      - One Playlist can have many Tracks.
      - One Track can be in many Playlists.
    - Playlist is the relation table for the _explicit_ m-n relation between User and Track.
-4. Seed the database with at least 5 users, 20 tracks, and 10 playlists. Each playlist should be owned by a random user and should contain at least 8 tracks.
+4. Seed the database with at least 5 users, 20 tracks, and 10 playlists. Each playlist should be owned by a random user. Connect it to a number of randomly chosen tracks.
 
 ## API
 
