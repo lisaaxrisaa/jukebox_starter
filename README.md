@@ -30,7 +30,7 @@ Once your database is properly seeded, build an Express app that serves the foll
 
 - `GET /playlists` sends array of all playlists
 - `POST /playlists` creates a new playlist
-  - the request should indicate the owner of the playlist and the tracks in the playlist
+  - the request should indicate the name, description, ownerId, and trackIds of the playlist
 - `GET /playlists/:id` sends specific playlist, including all tracks
 
 `/tracks` router
