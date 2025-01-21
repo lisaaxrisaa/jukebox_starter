@@ -99,3 +99,17 @@ router.get('/tracks/:id', async (req, res) => {
     res.status(400).send({ error: 'Track not found.' });
   }
 });
+
+router.delete('/users/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const response = await prisma.user.delete({
+      where: {
+        id,
+      },
+    });
+    res.status(200).json(response);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});

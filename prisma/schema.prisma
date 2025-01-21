@@ -24,12 +24,12 @@ model Playlist {
   name String
   description String 
   ownerId String
-  owner User @relation(fields: [ownerId], references: [id])
-  tracks Track[] @relation("PlaylistTracks")
+  owner User @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  tracks Track[] @relation(name: "PlaylistTracks")
 }
 
 model Track {
   id String @id @default(uuid())
   name String
-  playlists Playlist[] @relation("PlaylistTracks")
+  playlists Playlist[] @relation(name: "PlaylistTracks")
 }
